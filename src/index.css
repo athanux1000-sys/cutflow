@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --cf-bg: #F6F7F9;
+    --cf-surface: #FFFFFF;
+    --cf-surface-2: #EEF0F4;
+    --cf-border: rgba(15, 23, 42, 0.1);
+    --cf-text: #0F172A;
+    --cf-muted: #64748B;
+    --cf-accent: #0D9488;
+    --cf-accent-hover: #0F766E;
+  }
+
+  .dark {
+    --cf-bg: #0B0C0E;
+    --cf-surface: #121418;
+    --cf-surface-2: #191C22;
+    --cf-border: rgba(255, 255, 255, 0.08);
+    --cf-text: #F4F5F7;
+    --cf-muted: #8E95A5;
+    --cf-accent: #14B8A6;
+    --cf-accent-hover: #0D9488;
+  }
+
+  html,
+  body {
+    font-family: 'Inter', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--cf-bg);
+    color: var(--cf-text);
+  }
+
+  .font-mono-tabular {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom sleek scrollbars for timeline & studio panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(142, 149, 165, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 149, 165, 0.45);
+}
